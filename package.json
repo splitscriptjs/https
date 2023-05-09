@@ -1,20 +1,46 @@
 {
-  "name": "@splitscript.js/https",
-  "version": "1.0.0",
-  "description": "Send HTTPS/HTTP requests",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "https",
-    "http",
-    "requests",
-    "cjs",
-    "esm",
-    "hybrid",
-    "splitcript"
-  ],
-  "author": "ultraviolet",
-  "license": "MIT"
+	"name": "@splitscript.js/https",
+	"version": "1.0.0",
+	"description": "Send HTTPS/HTTP requests",
+	"types": "./dist/types/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"CHANGELOG.md",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "rm -fr dist/* && tsc && esbuild `find src -type f -name \"*.ts\"` --platform='node' --ignore-annotations --format='cjs' --outdir='dist/cjs' && esbuild `find src -type f -name \"*.ts\"` --platform='node' --ignore-annotations --format='esm' --outdir='dist/esm' && cp src/esmpackage.json dist/esm/package.json"
+	},
+	"keywords": [
+		"https",
+		"http",
+		"requests",
+		"cjs",
+		"esm",
+		"hybrid",
+		"splitcript"
+	],
+	"author": "ultraviolet",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.1.0",
+		"esbuild": "^0.17.18",
+		"typescript": "^5.0.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/splitscriptjs/https.git"
+	},
+	"bugs": {
+		"url": "https://github.com/splitscriptjs/https/issues"
+	},
+	"homepage": "https://splitscript.js.org/https"
 }
