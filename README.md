@@ -11,17 +11,12 @@
 
 [![downloads](https://img.shields.io/npm/dm/@splitscript.js/https?color=90ee90&style=flat)](https://www.npmjs.com/package/@splitscript.js/https)
 
-</div>
-
 <a href='https://splitscript.js.org/https' style='text-decoration:none;'>
 
-<div style='display:flex;align-items:center;justify-content:center;color:rgb(144, 144, 238);'>
-          <img src='https://i.imgur.com/AdvvCYb.png' alt='docs' height='100px' style='padding-right:10px;'>
-          Docs
+<img src='https://i.imgur.com/8PqPYu0.png' alt='docs' height='100px'>
+</a>
 
 </div>
-
-</a>
 
 ## About
 
