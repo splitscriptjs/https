@@ -30,12 +30,8 @@ It's a tiny package for sending `http(s)` requests
 $ npm i @splitscript.js/https
 ```
 
-## Other packages
-
-Coming soon
-
 <div align="center">
-<sub><code>v1.0.0</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
+<sub><code>v1.0.2</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
 
 <sub>by [ultraviolet](https://github.com/ultravioletasdf)</sub>
 
