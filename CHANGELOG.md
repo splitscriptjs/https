@@ -6,6 +6,10 @@ First version - request, get, post, put, patch, delete
 
 `README.md` update
 
-# 1.0.3
+# 1.0.2
 
 Another `README.md` update
+
+# 1.0.3
+
+Fixed type exports in `package.json`
