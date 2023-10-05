@@ -1,3 +1,7 @@
+# 1.0.5
+
+Change request response.data to type unknown
+
 # 1.0.0
 
 First version - request, get, post, put, patch, delete

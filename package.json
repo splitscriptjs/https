@@ -1,6 +1,6 @@
 {
 	"name": "@splitscript.js/https",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Send HTTPS/HTTP requests",
 	"types": "./dist/types/index.d.ts",
 	"exports": {
@@ -44,5 +44,13 @@
 	"bugs": {
 		"url": "https://github.com/splitscriptjs/https/issues"
 	},
-	"homepage": "https://splitscript.js.org/https"
+	"homepage": "https://splitscript.js.org/https",
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"useTabs": true,
+		"bracketSpacing": true,
+		"arrowParens": "always",
+		"trailingComma": "none"
+	}
 }

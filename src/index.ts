@@ -8,7 +8,7 @@ type Request = http.RequestOptions & {
 
 type requestRes = {
 	res: http.IncomingMessage
-	data: string | object
+	data: unknown
 }
 /**
  * Send a `http(s)` request
