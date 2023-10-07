@@ -11,7 +11,9 @@
 		"esModuleInterop": true,
 		"target": "ES2018",
 		"outDir": "dist/types",
-		"moduleResolution": "nodenext"
+		"moduleResolution": "nodenext",
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true
 	},
 	"include": ["src/**/*"]
 }

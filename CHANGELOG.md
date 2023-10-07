@@ -1,3 +1,7 @@
+# 2.0.0
+
+Add a http server
+
 # 1.0.5
 
 Change request response.data to type unknown

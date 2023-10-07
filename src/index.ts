@@ -1,6 +1,7 @@
 import * as https from 'node:https'
 import * as http from 'node:http'
 import { isHttps, parseData, toQuery } from './utils.js'
+import start from './server/start.js'
 type Request = http.RequestOptions & {
 	body?: any
 	params?: object
@@ -82,4 +83,6 @@ function _delete(
 	return request(url, { method: 'DELETE', ...options })
 }
 export { _delete as delete }
-export default { request, get, post, put, patch, delete: _delete }
+export { start }
+export default { request, get, post, put, patch, delete: _delete, start }
+export type * as Events from './events'

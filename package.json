@@ -1,7 +1,7 @@
 {
 	"name": "@splitscript.js/https",
-	"version": "1.0.5",
-	"description": "Send HTTPS/HTTP requests",
+	"version": "2.0.0",
+	"description": "Send and listen for HTTPS/HTTP requests",
 	"types": "./dist/types/index.d.ts",
 	"exports": {
 		".": {
@@ -33,6 +33,7 @@
 	"author": "ultraviolet",
 	"license": "MIT",
 	"devDependencies": {
+		"@types/busboy": "^1.5.1",
 		"@types/node": "^20.1.0",
 		"esbuild": "^0.17.18",
 		"typescript": "^5.0.4"
@@ -52,5 +53,9 @@
 		"bracketSpacing": true,
 		"arrowParens": "always",
 		"trailingComma": "none"
+	},
+	"dependencies": {
+		"@splitscript.js/core": "^2.2.2",
+		"busboy": "^1.6.0"
 	}
 }

@@ -5,7 +5,7 @@
 </a>
 
 <div align="center">
-<p> Tiny package for sending <code>https(s)</code> requests </p>
+<p> Tiny package for sending and receiving <code>https(s)</code> requests </p>
 
 [![install size](https://packagephobia.com/badge?p=@splitscript.js/https)](https://packagephobia.com/result?p=@splitscript.js/https)
 
@@ -30,8 +30,51 @@ It's a tiny package for sending `http(s)` requests
 $ npm i @splitscript.js/https
 ```
 
+## Listen for requests
+
+### Start the server
+
+```ts
+import https from '@splitscript.js/https'
+https.start({ port: 3000 })
+```
+
+### Handle requests
+
+Create a file in functions/http/get
+
+```ts
+import { Events } from '@splitscript.js/https'
+export default async function ({ req, res }: Events.Get) {
+	res.write('<html><body><h1>hello world</h1></body></html>')
+	res.end()
+}
+```
+
+### Parse body
+
+Bodys get parsed automatically
+
+```ts
+import { Events } from '@splitscript.js/https'
+export default async function ({ req, res, bodyParsed }: Events.Post}) {
+    res.end(JSON.stringify(bodyParsed))
+}
+```
+
+### Raw body
+
+To get the raw body
+
+```ts
+import { Events } from '@splitscript.js/https'
+export default async function ({ req, res, body }: Events.Post}) {
+    res.end(body)
+}
+```
+
 <div align="center">
-<sub><code>v1.0.5</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
+<sub><code>v2.0.0</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
 
 <sub>by [ultraviolet](https://github.com/ultravioletasdf)</sub>
 
