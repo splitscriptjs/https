@@ -74,7 +74,7 @@ export default async function ({ req, res, body }: Events.Post}) {
 ```
 
 <div align="center">
-<sub><code>v2.0.0</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
+<sub><code>v2.0.1</code> | <a href='https://splitscript.js.org/https'>docs</a> </sub>
 
 <sub>by [ultraviolet](https://github.com/ultravioletasdf)</sub>
 

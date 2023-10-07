@@ -113,10 +113,35 @@ export default function start(options: Options = {}) {
 				body,
 				bodyParsed
 			})
-			if ((await emitter.listeners(path)).length === 0) {
-				res.statusCode = 404
-				res.end()
-			}
+			emitter.listeners().then((listeners) => {
+				if (
+					!listeners.find((v) => {
+						if (v.event.length === 1) {
+							return [
+								'get',
+								'post',
+								'put',
+								'patch',
+								'delete',
+								'head',
+								'options',
+								'connect',
+								'trace'
+							].includes(req.method?.toLowerCase() || 'get')
+						} else {
+							return (
+								JSON.stringify([
+									req.method?.toLowerCase() || 'get',
+									...path
+								]) === JSON.stringify(v)
+							)
+						}
+					})
+				) {
+					res.statusCode = 404
+					res.end()
+				}
+			})
 		})
 	})
 	server.listen(options.port, () => {

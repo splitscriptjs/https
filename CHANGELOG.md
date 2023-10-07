@@ -1,3 +1,7 @@
+# 2.0.1
+
+Fix 404
+
 # 2.0.0
 
 Add a http server
